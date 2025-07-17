@@ -10,7 +10,7 @@ triggerRouter.post("/trigger-event", async (req, res) => {
     if (token !== process.env.SOCKET_API_SECRET_KEY) {
         return res.status(403).json({ message: "Forbidden" });
     }
-    console.log(req.body);
+    // console.log(req.body);
     const { userId, type, notificationData, namespace } = req.body;
 
     if (!userId || !type) {

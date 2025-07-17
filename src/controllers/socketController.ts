@@ -1,4 +1,4 @@
-import { Server, Socket } from "socket.io";
+import { Server, Socket } from "socket.io";  // express
 import {
     SocketTriggerTypes,
     VMSocketTriggerTypes,

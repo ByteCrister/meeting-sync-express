@@ -34,7 +34,7 @@ export const triggerSocketEvent = async ({
 
     try {
         namespaceIo.to(socketId).emit(type, { userId, notificationData });
-        console.log(`---------------- Socket event '${type}' sent to userId: ${userId} on namespace 'chat' ---------------`);
+        // console.log(`---------------- Socket event '${type}' sent to userId: ${userId} on namespace 'chat' ---------------`);
     } catch (err) {
         console.error("Error triggering socket event:", err);
     }

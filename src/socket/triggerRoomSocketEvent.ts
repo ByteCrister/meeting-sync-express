@@ -12,7 +12,7 @@ export const triggerRoomSocketEvent = ({
     roomId,
     type,
     data,
-    namespace = "video",
+    namespace,
 }: TriggerRoomSocketParams) => {
     const io = getIOInstance();
     if (!io) {
@@ -24,7 +24,7 @@ export const triggerRoomSocketEvent = ({
 
     try {
         namespaceIO.to(roomId).emit(type, data);
-        console.log(`Socket event '${type}' sent to room: ${roomId} in namespace '${namespace}'`);
+        // console.log(`Socket event '${type}' sent to room: ${roomId} in namespace '${namespace}'`);
     } catch (err) {
         console.log("Error triggering room socket event:", err);
     }

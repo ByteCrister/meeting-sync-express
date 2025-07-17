@@ -58,6 +58,6 @@ app.use("/api", videoSocketMapRouter);
 
 connectDB().then(() => {
   server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on  http://localhost:${PORT}`);
   });
 });
