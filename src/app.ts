@@ -11,6 +11,7 @@ import helmet from "helmet";
 import { setIOInstance } from "./socket/setIOInstance";
 import videoSocketMapRouter from "./routes/route.videoSocketMap";
 import socketMapRouter from "./routes/route.socketMap";
+import { startCronJobs } from "./cron";
 
 dotenv.config();
 
@@ -44,6 +45,7 @@ const io = new SocketIOServer(server, {
     credentials: true,
   },
 });
+startCronJobs();
 setIOInstance(io);
 initializeSocket(io);
 

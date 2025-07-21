@@ -13,15 +13,21 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
+    "luxon": "^3.7.1",
     "mongoose": "^8.16.3",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.5",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/luxon": "^3.6.2",
     "@types/node": "^24.0.13",
+    "@types/nodemailer": "^6.4.17",
     "@types/socket.io": "^3.0.1",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
