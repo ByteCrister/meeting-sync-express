@@ -1,15 +1,15 @@
-import VideoCallModel, { IVideoCall } from "@/models/VideoCallModel";
-import SlotModel from "@/models/SlotModel";
-import UserModel from "@/models/UserModel";
 import { DateTime } from "luxon";
-import ConnectDB from "@/config/ConnectDB";
-import { handleDeleteVideoCallDirectly } from "../server/handleDeleteVideoCallDirectly";
-import { updateTrendScoreForSlot } from "../server/updateTrendScoreForSlot";
-import { IVideoCallStatus } from "../constants";
+import connectDB from "../config/db";
+import VideoCallModel, { IVideoCall } from "../models/VideoCallModel";
+import { IVideoCallStatus } from "../utils/constants";
+import SlotModel from "../models/SlotModel";
+import UserModel from "../models/UserModel";
+import { handleDeleteVideoCallDirectly } from "../services/handleDeleteVideoCallDirectly";
+import { updateTrendScoreForSlot } from "../services/updateTrendScoreForSlot";
 
 export async function cleanupExpiredVideoCalls() {
     try {
-        await ConnectDB();
+        await connectDB();
     } catch (connErr) {
         console.log("[cleanupExpiredVideoCalls] DB connection failed:", connErr);
         return;
