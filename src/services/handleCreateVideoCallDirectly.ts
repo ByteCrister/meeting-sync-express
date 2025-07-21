@@ -1,7 +1,7 @@
 import getNotificationExpiryDate from "./getNotificationExpiryDate";
 import { parse } from 'date-fns';
 import mongoose from "mongoose";
-import connectDB from "../config/db";
+import { connectDB } from "../config/db";
 import UserModel from "../models/UserModel";
 import SlotModel from "../models/SlotModel";
 import VideoCallModel from "../models/VideoCallModel";

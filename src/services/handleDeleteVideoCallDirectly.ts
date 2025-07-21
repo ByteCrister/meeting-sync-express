@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 import { triggerRoomSocketEvent } from "../socket/triggerRoomSocketEvent";
-import connectDB from "../config/db";
+import { connectDB } from "../config/db";
 import VideoCallModel, { IVideoCallParticipant, IVideoCallSession } from "../models/VideoCallModel";
 import { calculateAndUpdateEngagement } from "./calculateAndUpdateEngagement";
 import { SocketTriggerTypes } from "../utils/constants";
 
 export async function handleDeleteVideoCallDirectly(meetingId: string) {
-  
+
   console.log(`[handleDeleteVideoCallDirectly] Attempting to delete video call for meetingId: ${meetingId}`);
 
   if (!mongoose.Types.ObjectId.isValid(meetingId)) {

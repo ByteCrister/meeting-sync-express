@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import connectDB from "../config/db";
+import { connectDB } from "../config/db";
 import VideoCallModel, { IVideoCall } from "../models/VideoCallModel";
 import { IVideoCallStatus } from "../utils/constants";
 import SlotModel from "../models/SlotModel";

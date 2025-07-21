@@ -3,7 +3,7 @@ import cron from "node-cron";
 import { triggerSocketEvent } from "../socket/triggerSocketEvent";
 import { DateTime } from "luxon";
 import { getReminderHTML } from "./getReminderHTML";
-import connectDB from "../config/db";
+import { connectDB } from "../config/db";
 import SlotModel, { IRegisterStatus } from "../models/SlotModel";
 import UserModel from "../models/UserModel";
 import { emailAuthentication } from "../config/NodeEmailer";
